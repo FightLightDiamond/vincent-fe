@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Staff",
+      "email": "staff@gmail.com",
+      "password": "password",
+      "role": "staff"
+    },
+    {
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "password",
+      "id": 2,
+      "role": "admin"
+    },
+    {
+      "name": "User",
+      "email": "user@gmail.com",
+      "password": "password",
+      "id": 3,
+      "role": "user"
+    },
+    {
+      "name": "User2",
+      "email": "user2@gmail.com",
+      "password": "password",
+      "id": 4,
+      "role": "user"
+    }
+  ],
+  "tasks": [
+    {
+      "active": true,
+      "id": 2
+    },
+    {
+      "active": false,
+      "id": 4
+    },
+    {
+      "active": false,
+      "id": 5
+    },
+    {
+      "title": "1998000-999991d7 edit task",
+      "active": 1,
+      "assign": 3,
+      "id": 6
+    },
+    {
+      "title": "new task",
+      "active": 1,
+      "id": 8,
+      "assign": 2
+    },
+    {
+      "title": "new task for stafff",
+      "active": 1,
+      "id": 9,
+      "assign": 1
+    },
+    {
+      "title": "for user2",
+      "active": 1,
+      "id": 10,
+      "assign": 4
+    }
+  ]
+}

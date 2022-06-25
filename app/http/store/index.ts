@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import _rootReducer from './reducers/_root.reducer';
 import _rootSaga from "./sagas/_root.saga";
 import createSagaMiddleware from "@redux-saga/core";
+import {configureStore} from "@reduxjs/toolkit";
 // import autoMergeLevel2 from "redux-persist/es/stateReconciler/autoMergeLevel2";
 
 const initialState = {};
@@ -24,6 +25,12 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, _rootReducer)
 const store = createStore(persistedReducer, initialState, applyMiddleware(...middlewares));
+
+// configureStore({
+// 	reducer: persistedReducer,
+// 	preloadedState: initialState,
+// 	middleware: getDefaultMiddleware => getDefaultMiddleware.apply(middlewares)
+// })
 
 store.subscribe(() => {
 	console.log('store', store.getState())

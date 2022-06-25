@@ -29,7 +29,7 @@ function* indexWorker(action: IAction<any>): any {
 	} else {
 			const {data} = response
 			const payload = data
-			yield put({type: indexSuccess.toString(), payload})
+			yield put({type: indexSuccess.type, payload})
 	}
 }
 
@@ -42,7 +42,7 @@ function* storeWorker(action: IAction<any>): any {
 	} else {
 			const {data} = response
 			const payload = data
-			yield put({type: storeSuccess.toString(), payload})
+			yield put({type: storeSuccess.type, payload})
 	}
 }
 
@@ -56,7 +56,7 @@ function* findWorker(action: IAction<number>): any {
 			// console.log({response})
 			// const {data} = response
 			const payload = response
-			yield put({type: findSuccess.toString(), payload})
+			yield put({type: findSuccess.type, payload})
 	}
 }
 
@@ -70,7 +70,7 @@ function* updateWorker(action: IAction<any>): any {
 	} else {
 			const {data} = response
 			const payload = data
-			yield put({type: updateSuccess.toString(), payload})
+			yield put({type: updateSuccess.type, payload})
 	}
 }
 
@@ -83,16 +83,16 @@ function* destroyWorker(action: IAction<any>): any {
 	} else {
 			const {data} = response
 			const payload = data
-			yield put({type: destroySuccess.toString(), payload})
+			yield put({type: destroySuccess.type, payload})
 	}
 }
 
 function* Watcher() {
-	yield takeLeading(index.toString(), indexWorker)
-	yield takeLeading(find.toString(), findWorker)
-	yield takeLeading(store.toString(), storeWorker)
-	yield takeLeading(update.toString(), updateWorker)
-	yield takeLeading(destroy.toString(), destroyWorker)
+	yield takeLeading(index.type, indexWorker)
+	yield takeLeading(find.type, findWorker)
+	yield takeLeading(store.type, storeWorker)
+	yield takeLeading(update.type, updateWorker)
+	yield takeLeading(destroy.type, destroyWorker)
 }
 
 export default Watcher

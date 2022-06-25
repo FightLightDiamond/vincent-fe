@@ -1,9 +1,9 @@
 import Request from "./request";
 
 export default class AbstractService {
-  name = null
+  name: string = ''
 
-  async index(filter: any) {
+  async index(filter: object) {
     try {
       const response = await Request.get(`${this.name}`, filter);
 
@@ -35,7 +35,7 @@ export default class AbstractService {
     }
   }
 
-  async update(id: number, data: any) {
+  async update(id: number, data: object) {
     try {
       const response = await Request.put(`${this.name}${id}`, data);
 

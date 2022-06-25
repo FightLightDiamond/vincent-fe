@@ -108,7 +108,6 @@ const UseStater = () => {
           }
         </ul>
 
-
         <ul>
           <li>Component dc re-render lại sau khi `setState` cuối cùng</li>
           <li>Initial state chỉ dùng cho lần đầu</li>

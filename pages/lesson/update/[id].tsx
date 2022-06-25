@@ -31,6 +31,8 @@ const LessonUpdate: NextPage = () => {
     if (typeof id === "string") {
       const pid = parseInt(id)
       dispatch(find(pid));
+    } else {
+      dispatch(find(pid));
     }
   }, [id]);
 

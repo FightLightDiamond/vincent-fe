@@ -1,9 +1,9 @@
 import type {NextPage} from 'next'
 import {useDispatch, useSelector} from "react-redux";
 import {useRouter} from 'next/router'
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {find} from '../../app/http/store/reducers/lesson.slice'
-import {Card, Col, Divider, List, Row, Typography, Table, Button} from "antd";
+import {Col, Divider, List, Row, Button} from "antd";
 import Link from 'next/link'
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -26,7 +26,6 @@ const LessonShow: NextPage = () => {
 
   return (
     <>
-
       <Row gutter={[50, 50, 50, 50]}>
         {
           loading && <Col className="gutter-row" span={6}>

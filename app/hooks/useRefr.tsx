@@ -15,9 +15,6 @@ import ContentMemo from "./ContentMemo";
  * Render props
  * @constructor
  */
-
-
-
 const UseRefr = () => {
   const [count, setCount] = useState<number>(60)
   // const [intervalId, setIntervalId] = useState<any>(null)
@@ -66,3 +63,5 @@ const UseRefr = () => {
  * Avoid rendering in unnecessary situations
  */
 export default memo(UseRefr)
+
+

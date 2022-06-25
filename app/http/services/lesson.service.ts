@@ -23,7 +23,7 @@ const LessonService = {
     }
   },
 
-  find: async (id: number) => {
+  find: async (id: number | undefined) => {
     try {
       const response = await Request.get(`tut/lesson/${id}`);
 
